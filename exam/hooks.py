@@ -45,6 +45,15 @@ app_license = "MIT"
 #	"Role": "home_page"
 # }
 
+# Fixtures 
+
+# fixtures = [
+    
+#     {"dt":""},
+#     {"dt":""},
+#     {"dt":"Role" , "filters":[["name","in",["Student"]]]}
+# ]
+
 # Generators
 # ----------
 
