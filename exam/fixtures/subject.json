@@ -1,0 +1,23 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Subject",
+  "modified": "2023-09-16 15:32:30.205298",
+  "name": "Subject-Maths",
+  "subject_name": "Maths"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Subject",
+  "modified": "2023-09-16 15:32:39.180896",
+  "name": "Subject-English",
+  "subject_name": "English"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Subject",
+  "modified": "2023-09-16 15:33:06.909837",
+  "name": "Subject-Real Estate",
+  "subject_name": "Real Estate"
+ }
+]

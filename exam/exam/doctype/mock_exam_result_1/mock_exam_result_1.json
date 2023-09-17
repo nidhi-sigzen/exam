@@ -1,6 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:Result-{student}-{#}",
  "creation": "2023-09-16 11:15:41.779260",
  "default_view": "List",
  "doctype": "DocType",
@@ -9,8 +10,10 @@
  "field_order": [
   "mock_exam",
   "student",
+  "subject",
   "passing_marks",
   "obtained_marks",
+  "total_marks",
   "submission_time",
   "amended_from"
  ],
@@ -20,8 +23,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Mock Exam",
-   "options": "Mock Exam 1",
-   "reqd": 1
+   "options": "Mock Exam 1"
   },
   {
    "fieldname": "student",
@@ -65,15 +67,26 @@
    "options": "Mock Exam Result 1",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "label": "Subject"
+  },
+  {
+   "fieldname": "total_marks",
+   "fieldtype": "Data",
+   "label": "Total Marks"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-09-16 11:41:22.308609",
+ "modified": "2023-09-17 16:12:34.434179",
  "modified_by": "Administrator",
  "module": "exam",
  "name": "Mock Exam Result 1",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
@@ -87,6 +100,15 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Student",
+   "share": 1
   }
  ],
  "sort_field": "modified",

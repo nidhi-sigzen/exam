@@ -11,11 +11,11 @@ app_license = "MIT"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/exam/css/exam.css"
+app_include_css = "/assets/exam/css/exam.css"
 # app_include_js = "/assets/exam/js/exam.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/exam/css/exam.css"
+web_include_css = "/assets/exam/css/exam.css"
 # web_include_js = "/assets/exam/js/exam.js"
 
 # include custom scss in every website theme (without file extension ".scss")
@@ -47,12 +47,19 @@ app_license = "MIT"
 
 # Fixtures 
 
-# fixtures = [
+fixtures = [
     
-#     {"dt":""},
-#     {"dt":""},
-#     {"dt":"Role" , "filters":[["name","in",["Student"]]]}
-# ]
+    {"dt":"Subject"},
+    {"dt":"Questions"},
+    {"dt":"Website Slideshow"},
+    {"dt":"Role" , "filters":[["name","in",["Student","Examiner","Data Analyst"]]]}
+]
+
+website_context = {
+     "favicon": "/assets/exam/img/logo.jpg",
+     "splash_image": "/assets/exam/img/logo.jpg",
+     "app_logo":"/assets/exam/img/logo.jpg"
+    }
 
 # Generators
 # ----------
@@ -127,13 +134,13 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
-# }
+doc_events = {
+    "Student 2": {
+        "before_insert": "exam.exam.doctype.student_2.student_2.before_insert"
+    }
+
+
+}
 
 # Scheduled Tasks
 # ---------------

@@ -1,29 +1,33 @@
 {
  "actions": [],
  "allow_rename": 1,
+ "autoname": "format:Mock Exam-{student_name}-{#}",
  "creation": "2023-09-16 11:16:29.240312",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "student_name",
   "exam_name",
+  "student_name",
   "date_and_time",
-  "column_break_utkwg",
   "duration",
+  "column_break_utkwg",
   "subject",
+  "passing_marks",
+  "total_marks",
   "obtained_marks",
-  "amended_from",
   "questions_each_question_is_for_5_marks_section",
-  "questions"
+  "questions",
+  "amended_from"
  ],
  "fields": [
   {
    "fieldname": "exam_name",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
-   "label": "Exam Name"
+   "label": "Exam Name",
+   "options": "Student Exam Document 1"
   },
   {
    "fieldname": "date_and_time",
@@ -68,32 +72,46 @@
   },
   {
    "fieldname": "student_name",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "Student Name",
+   "options": "Student 2",
    "reqd": 1
   },
   {
    "fieldname": "obtained_marks",
    "fieldtype": "Data",
-   "label": "Obtained Marks"
+   "hidden": 1,
+   "label": "Obtained Marks",
+   "read_only": 1
   },
   {
    "fieldname": "questions_each_question_is_for_5_marks_section",
    "fieldtype": "Section Break",
-   "label": "Questions (Each Question is for 5 marks))"
+   "label": "Questions (Each Question is for 5 marks)"
   },
   {
    "fieldname": "column_break_utkwg",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_marks",
+   "fieldtype": "Int",
+   "label": "Total Marks"
+  },
+  {
+   "fieldname": "passing_marks",
+   "fieldtype": "Data",
+   "label": "Passing Marks"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-09-16 16:33:17.889006",
+ "modified": "2023-09-17 17:37:56.394877",
  "modified_by": "Administrator",
  "module": "exam",
  "name": "Mock Exam 1",
+ "naming_rule": "Expression",
  "owner": "Administrator",
  "permissions": [
   {
