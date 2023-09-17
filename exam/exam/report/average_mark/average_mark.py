@@ -5,42 +5,57 @@ import frappe
 
 
 def execute(filters=None):
-    columns=get_columns()
-    data = average_mark_data(filters)
+    columns = get_columns()
+    data = calculate_subject_averages(filters)
     return columns, data
 
 
 def get_columns():
     columns = [
-
         {
-            "fieldname": "subject_name",
-            "label": ("Subject Name"),
-            "fieldtype": "Data"
-            
+            "fieldname": "subject",
+            "label": "Subject",
+            "fieldtype": "Data",
+            "width":200
         },
         {
             "fieldname": "average_marks",
-            "label": ("Average Marks"),
-            "fieldtype": "Data",
-           
-        }
-        
+            "label": "Average marks",
+            "fieldtype": "Float",
+            "width":200
+        },
     ]
     return columns
 
-def average_mark_data(filters=None):
-    data = []
-    
-    avg_marks = frappe.get_list("Exam Result", filters=[], fields=["subject_name", "average_marks"])
-    for marks in avg_marks:
-            
 
-            row = {
-                "subject_name": marks.subject_name,
-                "average_marks": marks.average_marks
-                
-            }
-            data.append(row)
-            
+def calculate_subject_averages(filters=None):
+    subject_averages = {}
+    filter_list = []
+    
+    if filters.get("subject"):
+        filter_list.append({"subject": filters["subject"]})
+    
+    marks = frappe.get_all("Mock Exam Result 1",filters=filter_list, fields=["subject", "obtained_marks"])
+
+   
+    for mark in marks:
+        subject = mark.get("subject")
+        marks_obtained = mark.get("obtained_marks")
+
+        
+        if subject not in subject_averages:
+            subject_averages[subject] = {"total_marks": 0, "count": 0}
+
+        
+        subject_averages[subject]["total_marks"] += marks_obtained
+        subject_averages[subject]["count"] += 1
+
+    
+    for subject, data in subject_averages.items():
+        average = data["total_marks"] / data["count"]
+        subject_averages[subject]["average_marks"] = average  
+
+    
+    data = [{"subject": subject, "average_marks": data["average_marks"]} for subject, data in subject_averages.items()]
+
     return data

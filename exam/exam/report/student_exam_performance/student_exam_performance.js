@@ -2,13 +2,13 @@
 // For license information, please see license.txt
 /* eslint-disable */
 
-frappe.query_reports["Average Mark"] = {
+frappe.query_reports["Student Exam Performance"] = {
 	"filters": [
-        {
-			"fieldname": "subject",
-			"label": "Subject",
+		{
+			"fieldname": "student",
+			"label": "Student",
 			"fieldtype": "Link",
-			"options": "Subject"
+			"options": "Student 2"
 		},
 	]
 };

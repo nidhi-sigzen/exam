@@ -1,0 +1,83 @@
+[
+ {
+  "answers": "Multiple Listing Service",
+  "docstatus": 0,
+  "doctype": "Questions",
+  "modified": "2023-09-16 15:33:36.248563",
+  "name": "Que-Real Estate-2",
+  "questions": "What does \"MLS\" stand for in the real estate industry?",
+  "subject": "Subject-Real Estate"
+ },
+ {
+  "answers": "Real Estate Investment Trust",
+  "docstatus": 0,
+  "doctype": "Questions",
+  "modified": "2023-09-16 15:34:15.959510",
+  "name": "Que-Subject-Real Estate-3",
+  "questions": "In real estate, what does the acronym \"REIT\" stand for?",
+  "subject": "Subject-Real Estate"
+ },
+ {
+  "answers": "Estimating market value",
+  "docstatus": 0,
+  "doctype": "Questions",
+  "modified": "2023-09-16 15:35:45.745124",
+  "name": "Que-Subject-Real Estate-4",
+  "questions": "What is the primary purpose of a property appraisal in the real estate industry?",
+  "subject": "Subject-Real Estate"
+ },
+ {
+  "answers": "4",
+  "docstatus": 0,
+  "doctype": "Questions",
+  "modified": "2023-09-16 15:36:10.980666",
+  "name": "Que-Subject-Maths-5",
+  "questions": "2+2",
+  "subject": "Subject-Maths"
+ },
+ {
+  "answers": "50",
+  "docstatus": 0,
+  "doctype": "Questions",
+  "modified": "2023-09-16 15:36:35.587663",
+  "name": "Que-Subject-Maths-6",
+  "questions": "10*5",
+  "subject": "Subject-Maths"
+ },
+ {
+  "answers": "0",
+  "docstatus": 0,
+  "doctype": "Questions",
+  "modified": "2023-09-16 15:36:58.047406",
+  "name": "Que-Subject-Maths-7",
+  "questions": "90-90",
+  "subject": "Subject-Maths"
+ },
+ {
+  "answers": "Sad",
+  "docstatus": 0,
+  "doctype": "Questions",
+  "modified": "2023-09-16 15:38:19.044999",
+  "name": "Que-Subject-English-8",
+  "questions": "What is opposite of \" happy \" ?",
+  "subject": "Subject-English"
+ },
+ {
+  "answers": "Television",
+  "docstatus": 0,
+  "doctype": "Questions",
+  "modified": "2023-09-16 15:38:32.195202",
+  "name": "Que-Subject-English-9",
+  "questions": "What does the abbreviation \"TV\" stand for?",
+  "subject": "Subject-English"
+ },
+ {
+  "answers": "Children",
+  "docstatus": 0,
+  "doctype": "Questions",
+  "modified": "2023-09-16 15:39:04.629555",
+  "name": "Que-Subject-English-10",
+  "questions": "What is the plural form of \"child\"?",
+  "subject": "Subject-English"
+ }
+]
