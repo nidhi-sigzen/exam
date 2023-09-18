@@ -14,8 +14,6 @@
   "duration",
   "column_break_utkwg",
   "subject",
-  "passing_marks",
-  "total_marks",
   "obtained_marks",
   "questions_each_question_is_for_5_marks_section",
   "questions",
@@ -92,22 +90,12 @@
   {
    "fieldname": "column_break_utkwg",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "total_marks",
-   "fieldtype": "Int",
-   "label": "Total Marks"
-  },
-  {
-   "fieldname": "passing_marks",
-   "fieldtype": "Data",
-   "label": "Passing Marks"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-09-17 17:37:56.394877",
+ "modified": "2023-09-18 15:32:36.727218",
  "modified_by": "Administrator",
  "module": "exam",
  "name": "Mock Exam 1",
@@ -124,6 +112,31 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Examiner",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Student",
+   "select": 1,
+   "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],

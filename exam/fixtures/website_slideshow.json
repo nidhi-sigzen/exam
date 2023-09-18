@@ -1,0 +1,39 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Website Slideshow",
+  "header": null,
+  "modified": "2023-09-17 16:41:38.002513",
+  "name": "Student Slideshow",
+  "slideshow_items": [
+   {
+    "description": null,
+    "heading": null,
+    "image": "/files/school-student-passing-exam-in-classroom-free-vector.jpg",
+    "parent": "Student Slideshow",
+    "parentfield": "slideshow_items",
+    "parenttype": "Website Slideshow",
+    "url": null
+   },
+   {
+    "description": null,
+    "heading": null,
+    "image": "/files/92071461-students-writing-an-exam.jpg",
+    "parent": "Student Slideshow",
+    "parentfield": "slideshow_items",
+    "parenttype": "Website Slideshow",
+    "url": null
+   },
+   {
+    "description": null,
+    "heading": null,
+    "image": "/files/istockphoto-1136924822-612x612.jpg",
+    "parent": "Student Slideshow",
+    "parentfield": "slideshow_items",
+    "parenttype": "Website Slideshow",
+    "url": null
+   }
+  ],
+  "slideshow_name": "Student Slideshow"
+ }
+]

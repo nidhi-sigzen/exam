@@ -7,7 +7,8 @@ import frappe
 def execute(filters=None):
     columns = get_columns()
     data = calculate_subject_averages(filters)
-    return columns, data
+    chart=get_chart_data(data)
+    return columns, data , "Average marks", chart
 
 
 def get_columns():
@@ -59,3 +60,33 @@ def calculate_subject_averages(filters=None):
     data = [{"subject": subject, "average_marks": data["average_marks"]} for subject, data in subject_averages.items()]
 
     return data
+
+
+
+def get_chart_data(data):
+    chart_data = []
+    
+    for row in data:
+        subject = row['subject']
+        average_marks = row['average_marks']
+
+        chart_data.append({
+            'label': subject,
+            'average_marks': average_marks
+        })
+
+    chart = {
+        "data": {
+            "labels": [data['label'] for data in chart_data],
+            "datasets": [
+                {
+                    "name": "Average Marks",
+                    "values": [data['average_marks'] for data in chart_data],
+                }
+            ]
+        },
+        "type": "bar",
+        "colors": ["#228B22"],
+    }
+    
+    return chart
