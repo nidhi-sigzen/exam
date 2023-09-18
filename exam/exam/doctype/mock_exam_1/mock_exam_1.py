@@ -18,7 +18,6 @@ class MockExam1(Document):
         new_doc.mock_exam=self.name
         new_doc.subject=self.subject
         new_doc.submission_time = frappe.utils.now()
-        new_doc.total_marks=self.total_marks
         new_doc.submit()  
         
         
