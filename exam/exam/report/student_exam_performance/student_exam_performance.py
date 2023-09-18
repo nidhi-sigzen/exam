@@ -9,9 +9,9 @@ def execute(filters=None):
     
     columns=get_columns()
     data = exam_performance(filters)
-    chart = get_chart_data()
+    chart = get_chart_data(filters)
     
-    return columns, data, chart
+    return columns, data, "Student Exam Performance",chart
 
 
 def get_columns():
@@ -61,10 +61,15 @@ def exam_performance(filters=None):
             
     return data
 
-def get_chart_data():
+def get_chart_data(filters=None):
+    print(filters.student)
     chart_data=[]
-    
-    avg_marks = frappe.db.get_list("Mock Exam Result 1", fields=["subject","student", "obtained_marks"])
+    filter_list=[]
+    if filters.student:
+        filter_list.append({"student": filters["student"]})
+        
+        
+    avg_marks = frappe.db.get_list("Mock Exam Result 1", filters=filter_list,fields=["subject","student","student_name", "obtained_marks"])
     for marks in avg_marks:
         chart_data.append(
             {

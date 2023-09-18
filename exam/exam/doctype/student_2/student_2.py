@@ -24,3 +24,4 @@ def before_insert(doc, method):
         })
         user.insert()
         user.add_roles("Student")
+

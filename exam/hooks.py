@@ -6,6 +6,7 @@ app_publisher = "exam"
 app_description = "exam"
 app_email = "exam"
 app_license = "MIT"
+app_logo_url="/assets/exam/img/sigzen_logo2.png"
 
 # Includes in <head>
 # ------------------
@@ -48,11 +49,12 @@ web_include_css = "/assets/exam/css/exam.css"
 # Fixtures 
 
 fixtures = [
-    
+    {"dt":"Custom DocPerm","filter":[["role","in",["Student","Examiner","Data Analyst","Content Creator"]],
+                                     ["parent","in",["Subject","Mock Exam 1","Mock Exam Result 1","Questions","Student 2","Student Exam Document 1","Exam Question"]]]},
     {"dt":"Subject"},
     {"dt":"Questions"},
     {"dt":"Website Slideshow"},
-    {"dt":"Role" , "filters":[["name","in",["Student","Examiner","Data Analyst"]]]}
+    {"dt":"Role" , "filters":[["name","in",["Student","Examiner","Data Analyst","Content Creator"]]]}
 ]
 
 website_context = {
@@ -60,6 +62,12 @@ website_context = {
      "splash_image": "/assets/exam/img/logo.jpg",
      "app_logo":"/assets/exam/img/logo.jpg"
     }
+
+permission_query_conditions={
+    "Mock Exam Result 1":"exam.permissions.mock_exam_result.get_permission_query_for_examresult",
+    "Mock Exam 1":"exam.permissions.mock_exam_result.get_permission_query_for_exam",
+    "Student 2":"exam.permissions.mock_exam_result.get_permission_query_for_student"
+}     
 
 # Generators
 # ----------
